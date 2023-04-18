@@ -1,0 +1,29 @@
+//Вам дается строка S и целочисленный массив индексов int index[s.length].
+// Напишите программу, которая перетасует символы в S таким образом,
+// что символ c i-й позиции переместится на индекс index[i] в результирующей строке.
+public  class program {
+    public static void main(String[] args) {
+        
+        String s = "cba";
+        int[] index = new int []{3, 2, 1};
+        char[] array = s.toCharArray();
+        shuffle (array, index);
+        string p = shuffledArray.valueOf();
+        System.out.println(p);
+
+    }
+    
+    public static void shuffle(char[] array, int[] index)
+    {
+        char[] shuffledArray = new char[array.length];
+ 
+        for (int i = 0; i < array.length; i++) {
+            shuffledArray[index[i]] = array[i];
+        }
+ 
+        for (int i = 0; i < array.length; i++) {
+            array[i] = shuffledArray[i];
+        }
+    }
+
+}
